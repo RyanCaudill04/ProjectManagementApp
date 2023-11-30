@@ -1,2 +1,2 @@
-# Sharknado4SP_GUI
-GUI portion of our project
+# Sharknado4SP
+#This is the semester project repo for Sharknado4

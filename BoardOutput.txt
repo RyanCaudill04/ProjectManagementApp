@@ -1,0 +1,16 @@
+Your projects: 
+1. Electric Missiles
+	- Project Backlog:
+		1. Initialize super algorithm to detonate at warp speed
+			Comments: 
+			1. Avoid civilians Jeff! (unless it hurts profits) - Atticus Madden
+	- Doing:
+		1. Curve the metal to make a cylindrical shape
+			Comments: 
+			1. Not cylindrical enough - Jeff Goldblum
+			2. What's a cylinder? - Atticus Madden
+				1. How about you do it Jeff - Atticus Madden
+	- Abandoned:
+		1. Make impossible burger possible
+2. Soap Free Washers
+3. Air Computers
