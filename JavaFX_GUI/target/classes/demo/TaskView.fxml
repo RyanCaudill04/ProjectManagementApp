@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="917.0" style="-fx-background-color: #b4e8fa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="103.0" layoutY="47.0" style="-fx-text-fill: #1e90ff;" text="Users">
@@ -15,8 +14,11 @@
       <Label layoutX="103.0" layoutY="335.0" style="-fx-text-fill: #1e90ff;" text="Properties" />
       <AnchorPane layoutX="31.0" layoutY="64.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15;" />
       <AnchorPane layoutX="31.0" layoutY="359.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15;" />
-      <AnchorPane layoutX="417.0" layoutY="64.0" prefHeight="142.0" prefWidth="467.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15;" />
-      <Label layoutX="615.0" layoutY="46.0" style="-fx-text-fill: #1e90ff;" text="Label" />
+      <AnchorPane layoutX="417.0" layoutY="64.0" prefHeight="142.0" prefWidth="467.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15;">
+         <children>
+            <AnchorPane layoutX="24.0" layoutY="17.0" prefHeight="108.0" prefWidth="419.0" style="-fx-background-color: white; -fx-border-radius: 15; -fx-background-radius: 15;" />
+         </children></AnchorPane>
+      <Label layoutX="637.0" layoutY="38.0" style="-fx-text-fill: #1e90ff;" text="Label" />
       <AnchorPane layoutX="358.0" layoutY="259.0" prefHeight="329.0" prefWidth="534.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15;" />
       <Label layoutX="589.0" layoutY="240.0" prefHeight="18.0" prefWidth="80.0" style="-fx-text-fill: #1e90ff;" text="Comments" />
    </children>
