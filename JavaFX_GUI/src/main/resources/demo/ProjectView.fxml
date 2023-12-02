@@ -11,8 +11,6 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b4e8fa" height="799.0" stroke="BLACK" strokeType="INSIDE" width="1258.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="959.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="662.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
       <Text fill="#0043c9" layoutX="439.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Electric Missiles">
          <font>
             <Font size="48.0" />
@@ -23,8 +21,8 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Text fill="#4195d4" layoutX="494.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board" />
-      <Text fill="#0043c9" layoutX="689.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" underline="true" />
+      <Text fill="#0043c9" layoutX="494.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board" underline="true" />
+      <Text fill="#4195d4" layoutX="689.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="862.0" stroke="BLACK" strokeType="INSIDE" width="396.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="112.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="362.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
@@ -40,9 +38,24 @@
             <Image url="@../../../../../../Logo.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="366.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="74.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="74.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 20; -fx-arc-width: 20;" width="241.0" />
       <Text fill="WHITE" layoutX="147.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Backlog">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="662.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 20; -fx-arc-width: 20;" width="241.0" />
+      <Text fill="WHITE" layoutX="716.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Progress">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="156.0" layoutY="684.0" mnemonicParsing="false" text="Add Task" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="959.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 20; -fx-arc-width: 20;" width="241.0" />
+      <Button layoutX="1041.0" layoutY="684.0" mnemonicParsing="false" text="Add Task" />
+      <Button layoutX="744.0" layoutY="684.0" mnemonicParsing="false" text="Add Task" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="365.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" style="-fx-arc-height: 20; -fx-arc-width: 20;" width="241.0" />
+      <Text fill="WHITE" layoutX="1048.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Done">
          <font>
             <Font size="24.0" />
          </font>
@@ -52,19 +65,6 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="716.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Progress">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Button layoutX="156.0" layoutY="684.0" mnemonicParsing="false" text="Add Task" />
-      <Button layoutX="1041.0" layoutY="682.0" mnemonicParsing="false" text="Add Task" />
-      <Button layoutX="749.0" layoutY="682.0" mnemonicParsing="false" text="Add Task" />
       <Button layoutX="447.0" layoutY="684.0" mnemonicParsing="false" text="Add Task" />
-      <Text fill="WHITE" layoutX="1048.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Done">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
    </children>
 </Pane>
