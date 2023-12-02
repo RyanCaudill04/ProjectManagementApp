@@ -14,21 +14,17 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b4e8fa" height="799.0" stroke="BLACK" strokeType="INSIDE" width="1258.0" />
-      <Text fill="#0043c9" layoutX="533.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projects">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="959.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="662.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="240.0" layoutX="862.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="396.0" />
+      <Text fill="#0043c9" layoutX="439.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Electric Missiles">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="89.0" layoutX="107.0" layoutY="246.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="226.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="89.0" layoutX="176.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="88.0" />
       <Text fill="WHITE" layoutX="125.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Electric Missiles">
          <font>
             <Font size="24.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="195.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+">
-         <font>
-            <Font size="60.0" />
          </font>
       </Text>
       <Text fill="#4195d4" layoutX="494.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board" />
@@ -66,10 +62,31 @@
             </ImageView>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GigaChad, W.M.D." textAlignment="CENTER" wrappingWidth="199.1943359375" GridPane.columnIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="applecrusher@aol.com" wrappingWidth="197.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="1" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Points" textAlignment="CENTER" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Email" wrappingWidth="203.0673828125" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Points" wrappingWidth="202.646484375" GridPane.rowIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2147483647" wrappingWidth="199.7294921875" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="366.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="74.0" layoutY="228.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="241.0" />
+      <Text fill="WHITE" layoutX="147.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Backlog">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="451.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Do">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="716.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Progress">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="156.0" layoutY="684.0" mnemonicParsing="false" text="Add Task" />
+      <Button layoutX="1041.0" layoutY="682.0" mnemonicParsing="false" text="Add Task" />
+      <Button layoutX="749.0" layoutY="682.0" mnemonicParsing="false" text="Add Task" />
+      <Button layoutX="447.0" layoutY="684.0" mnemonicParsing="false" text="Add Task" />
    </children>
 </Pane>
