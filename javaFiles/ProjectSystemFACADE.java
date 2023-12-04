@@ -239,6 +239,11 @@ public class ProjectSystemFACADE {
     }
 
     public boolean addTask(String title, int priority, Date dueDate, int leaderboardPoints, String email) {
+        if (title == null || dueDate == null ||  email == null) {
+            return false;
+        } else if (priority < 0 || leaderboardPoints < 0) {
+            return false;
+        }
         System.out.println("Which column would you like to add the task to?");
         // show column options
         System.out.println(column.getName());
@@ -266,6 +271,9 @@ public class ProjectSystemFACADE {
     }
 
     public void makeComment(Task aTask, String body) {
+        if (aTask == null) {
+            return;
+        }
         aTask.makeComment(body, user);
     }
 
@@ -278,6 +286,9 @@ public class ProjectSystemFACADE {
     }
 
     public boolean selectComment(int num) {
+        if (task.getComments().size() < num || num < 1) {
+            return false;
+        }
         if (task.getComments().get(num - 1) == null) {
             return false;
         }
@@ -286,6 +297,9 @@ public class ProjectSystemFACADE {
     }
 
     public boolean selectTask(int num) {
+        if (num > column.getTasks().size() || num < 1) {
+            return false;
+        }
         this.task = column.getTasks().get(num - 1);
         return true;
     }

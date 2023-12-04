@@ -41,6 +41,9 @@ public class Column {
         return false;
     }
     public boolean taskExists(Task task) {
+        if(task == null){
+            return false;
+        }
         ProjectList pl = ProjectList.getInstance();
         ArrayList<Project> projects = pl.getProjects();
         for (Project p : projects) {
@@ -95,7 +98,11 @@ public class Column {
         return null;
     }
 
-    public void setName(String rename) {
+    public boolean setName(String rename) {
+        if (rename == ' ' || rename == null) {
+            return false;
+        }
         this.name = rename;
+        return true;
     }
 }
