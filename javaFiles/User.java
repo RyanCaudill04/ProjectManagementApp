@@ -86,13 +86,11 @@ public class User {
      * @returns user's newPassword.
      */
     public boolean setPassword(String newPassword, String oldPassword) {
-        if (this.password == newPassword) {
+        if (this.password.equals(oldPassword)) {
             this.password = newPassword;
             return true;
-        }else {
-            return false;
         }
-        
+            return false;
     }
 
     /*

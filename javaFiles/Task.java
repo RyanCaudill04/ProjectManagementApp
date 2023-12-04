@@ -60,16 +60,16 @@ public class Task {
      * 
      * @param comment the comment, users the user who create the comment.
      */
-    public String makeComment(String comment, User user) {///////
+    public boolean makeComment(String comment, User user) {///////
         if(comment == null || comment == ""){
-            return "Comment not added, invalid comment";
+            return true;
         } else if (user == null){
-            return "Comment not added, invalid user";
+            return false;
         }
         Comment newComment = new Comment(comment, user);
         comments.add(newComment);
-        return "Added " + comment + " by the user: " + user.getEmail();
-    }//REFACTORED
+        return true;
+    }//no boolean dependencies
 
     /*
      * Adds users to the assigned users list.
@@ -78,15 +78,15 @@ public class Task {
      * 
      * @return a success message.
      */
-    public String addUserToArray(User user, ArrayList<User> users) {
+    public boolean addUserToArray(User user, ArrayList<User> users) {
         if ((user == null)) {
-            return "Error, user is null";
+            return false;
         } else if (users == null){
-            return "Error, user list is null";
+            return false;
         }
             users.add(user);
-            return "User Added!";
-    }//REFACTORED
+            return true;
+    }//
 
     /*
      * Set leaderboard points of task.
@@ -95,9 +95,9 @@ public class Task {
      * 
      * @return a conformation message.
      */
-    public String addPoints(int leaderboardPoints) {
+    public boolean addPoints(int leaderboardPoints) {
         this.leaderboardPoints = leaderboardPoints;
-        return "Added " + leaderboardPoints + " to " + this.getTitle();
+        return true;
     }//no refactor needed
 
     /*
@@ -125,16 +125,12 @@ public class Task {
      * 
      * @return user name or null.
      */
-    public User assignTask(String email) {
-        if(email == null){//safety
-            return null;
+    public boolean assignTask(User user) {
+        if(user == null){//safety
+            return false;
         }
-        for (User user : this.assignedUsers) {
-            if (user.getEmail().equals(email)) {
-                return user;
-            }
-        }
-        return null;
+        this.assignedUsers.add(user);
+        return true;
     }//REFACTORED
 
     public void setPriority(int priority) {
@@ -234,10 +230,11 @@ public class Task {
     // return taskType;
     // }
 
-    public void assignUser(User user) {
+    public boolean assignUser(User user) {
         if (user == null) {
-            return;
+            return false;
         }
         assignedUsers.add(user);
+        return true;
     }
 }
