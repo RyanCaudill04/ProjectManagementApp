@@ -43,9 +43,12 @@ public class Comment {
         return dateOfComment;
     }
 
-    public String makeComment(String comment, User user) {///////
+    public boolean makeComment(String comment, User user) {///////
+        if (user == null || comment == null || comment == ' ') {
+            return false;
+        } 
         Comment newComment = new Comment(comment, user, new Date());
         comments.add(newComment);
-        return "Added " + comment + " by the user: " + user.getEmail();
+        return true;
     }
 }

@@ -32,18 +32,35 @@ public class Project {
     this.developers = developers;
   }
   
-  public String addColumn(String column) {//finish??
-    String rv = "column";
+  public boolean addColumn(String column) {//finish??
+    if (column == null || columnExists(column)) {
+      return false;
+    }
     columns.add(new Column(column));
-    return rv;
+    return true;
   }
-  public void addColumn(Column column) {
+  public boolean addColumn(Column column) {
+    if (column == null || columnExists(column.getName())) {
+      return false;
+    }
     columns.add(column);
+    return true;
+  }
+  private boolean columnExists(String columnName) {
+    if (columnName == ' ' || columnName == null) {
+      return false;
+    }
+    for (Columc c : columns) {
+      if (c.getName.equalsIgnoreCase(columnName)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public boolean removeColumn(String column) {
     for (Column c : columns) {
-      if (c.getName().equals(column));
+      if (c.getName().equalsIgnoreCase(column));
       {
         return columns.remove(c);
       }
@@ -51,33 +68,38 @@ public class Project {
     return false;
   }
 
-  public String renameColumn(String column, String rename) {
+  public boolean renameColumn(String column, String rename) {
+    if (column == null || rename == null || column == ' ' || rename == ' ') {
+      return false;
+    }
     for (Column c : columns) {
       if (c.getName().equals(column)) {
         c.setName(rename);
+        return true;
       }
     }
-    return "Column renamed";
+    return false;
   }
 
-  public String moveTask(String taskColumn, String task, String destination) {
+  public boolean moveTask(String taskColumn, String task, String destination) {
     Column destColumn = null;
     for (Column c : columns) {
-      if (c.getName().equals(destination)) {
+      if (c.getName().equalsIgnoreCase(destination)) {
         destColumn = c;//here
       }
     }
     if (destColumn == null) {
-      return "Destination column not found";
+      return false;
     }
     Task temp = null;
     boolean exists = false;
     for (Column c : columns) {
-      if (c.getName().equals(taskColumn)) {
+      if (c.getName().equalsIgnoreCase(taskColumn)) {
         exists = true;
         for (Task t : c.getTasks()) {
-          if (t.getTitle().equals(task)) {
+          if (t.getTitle().equalsIgnoreCase(task)) {
             temp = t;
+            break;
             //and here
           }
         }
@@ -86,7 +108,7 @@ public class Project {
       }
     }
 
-    if (!(temp == null && exists)) {
+    if (temp == null || !exists) {
       return "Task or Column not found";
     }
     return "Task moved to destination column";

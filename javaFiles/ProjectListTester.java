@@ -42,9 +42,9 @@ public class ProjectListTester {
         User uTest = new User(null, null, null, false, null);
         ArrayList<Column> cTest = new ArrayList<>();
         ArrayList<User> usTest = new ArrayList<>();
-        assertEquals(PL.addProject(null, uTest, cTest, usTest), null);
-        assertEquals(PL.addProject("test", null, cTest, usTest), null);
-        assertEquals(PL.addProject("test", uTest, null, usTest), null);
-        assertEquals(PL.addProject("test", uTest, cTest, null), null);
+        assertEquals(PL.addProject(null, uTest, cTest, usTest), false);
+        assertEquals(PL.addProject("test", null, cTest, usTest), false);
+        assertEquals(PL.addProject("test", uTest, null, usTest), false);
+        assertEquals(PL.addProject("test", uTest, cTest, null), false);
     }
 }
