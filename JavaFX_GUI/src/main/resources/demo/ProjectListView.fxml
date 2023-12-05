@@ -8,10 +8,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.ProjectsListViewController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b4e8fa" height="799.0" stroke="BLACK" strokeType="INSIDE" width="1258.0" />
-      <Text fill="#0043c9" layoutX="533.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projects">
+      <Text fx:id="lbl_title" fill="#0043c9" layoutX="533.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projects">
          <font>
             <Font size="48.0" />
          </font>
