@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.LoginController">
-  <children>
+   <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b4e8fa" height="400.0" layoutX="295.0" stroke="BLACK" strokeType="INSIDE" width="305.0" />
       <Button id="ButtonLogin" fx:id="ButtonLogin" layoutX="363.0" layoutY="226.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="24.0" prefWidth="170.0" text="Login" textFill="#0043c9" />

@@ -6,13 +6,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>                                                                                                                                       
-                                                                                                                                                                                                            <!--
-                                                                                                                                                                                                            Specifies the controlling class
-                                                                                                                                                                                                            You put code frome SceneBuilder
-                                                                                                                                                                                                            view,Show Sample Controller Skeleton
-                                                                                                                                                                                                            into the ProjectListViewController
-                                                                                                                                                                                                            -->
+<?import javafx.scene.text.Text?>
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.ProjectsListViewController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b4e8fa" height="799.0" stroke="BLACK" strokeType="INSIDE" width="1258.0" />
@@ -50,5 +45,7 @@
             <Image url="@../../../../../../Logo.png" />
          </image>
       </ImageView>
+      <Button fx:id="NewProject" layoutX="189.0" layoutY="402.0" mnemonicParsing="false" onAction="#openNewProjectDialog" text="Button" />
+      <Button fx:id="openElectricMissiles" layoutX="189.0" layoutY="278.0" mnemonicParsing="false" onAction="#gotoHome" text="Button" />
    </children>
 </Pane>

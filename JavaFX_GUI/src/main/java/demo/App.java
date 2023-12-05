@@ -10,7 +10,6 @@ import java.io.IOException;
 
 /**
  * JavaFX App
- * THIS IS A TEST LINE
  */
 public class App extends Application {
 
