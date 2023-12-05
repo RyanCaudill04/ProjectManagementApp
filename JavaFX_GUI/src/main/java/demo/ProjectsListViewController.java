@@ -67,8 +67,9 @@ public class ProjectsListViewController implements Initializable{
     public void initialize(URL arg0, ResourceBundle arg1) {
         ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
         //get the current user from the facade
-
-        lbl_title.setText("Welcome Portia");
+        User user = facade.getUser();
+        String firstName = user.getFirstName();
+        lbl_title.setText("Welcome " + firstName);
     }
 
 }
