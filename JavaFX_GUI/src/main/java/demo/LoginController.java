@@ -16,7 +16,7 @@ public class LoginController {
     @FXML
     private Button ButtonSignUp;
 
-        @FXML
+    @FXML
     private TextField txt_password;
 
     @FXML
