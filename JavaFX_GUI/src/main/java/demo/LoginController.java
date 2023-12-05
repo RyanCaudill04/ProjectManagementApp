@@ -35,7 +35,7 @@ public class LoginController {
             System.out.println("ERROR");
             return;
         }
-
+        facade.setUser(user);
         System.out.println("Logged in " + user.toString());
         App.setRoot("ProjectListView");
 
