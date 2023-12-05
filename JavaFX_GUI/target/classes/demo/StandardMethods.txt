@@ -1,24 +1,6 @@
-package demo;
-import javafx.scene.control.Button;
-
-import java.io.IOException;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.text.Text;
-
-public class TaskViewController {
-
-    @FXML
-    private Text LabelBody;
-
-    @FXML
-    private Text PropertiesBody;
-
-    @FXML
-    private Text UsersBody;
-
+    
+    //You will have these in most classes. These are the default buttons on the top bar.
+    
     @FXML
     private Button ContactUs;
 
@@ -68,7 +50,3 @@ public class TaskViewController {
     void gotoProjectListView(ActionEvent event) throws IOException {
         App.setRoot("ProjectListView");
     }
-
-    
-
-}
