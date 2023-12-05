@@ -43,7 +43,6 @@ public class ProjectsListViewController implements Initializable{
     @FXML
     void gotoContactUs(ActionEvent event) throws IOException {
         App.setRoot("ContactUs");
-
     }
 
     @FXML
@@ -73,7 +72,7 @@ public class ProjectsListViewController implements Initializable{
 
 
     @FXML
-    void openNewProjectDialog(ActionEvent event) {
+    void openNewProjectDialog(ActionEvent event) { //needs a pop-up text box implemented for all project fields
 
     }
 
