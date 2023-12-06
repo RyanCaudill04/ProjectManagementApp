@@ -45,5 +45,7 @@
             <Image url="@../../../../../../Logo.png" />
          </image>
       </ImageView>
+      <Button fx:id="MakeNewProject" layoutX="189.0" layoutY="402.0" mnemonicParsing="false" onAction="#openNewProjectDialog" text="Button" />
+      <Button fx:id="openElectricMissiles" layoutX="189.0" layoutY="278.0" mnemonicParsing="false" onAction="#gotoHome" text="Button" />
    </children>
 </Pane>

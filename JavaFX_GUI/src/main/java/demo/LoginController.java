@@ -16,7 +16,7 @@ public class LoginController {
     @FXML
     private Button ButtonSignUp;
 
-        @FXML
+    @FXML
     private TextField txt_password;
 
     @FXML
@@ -35,15 +35,15 @@ public class LoginController {
             System.out.println("ERROR");
             return;
         }
-
+        facade.setUser(user);//make the person who logged in the current user
         System.out.println("Logged in " + user.toString());
-        App.setRoot("ProjectListView");
+        App.setRoot("ProjectListView"); //display ProjectListView
 
     }
 
     @FXML
     void userSignup(ActionEvent event) {
-
+        
     }
 
 }

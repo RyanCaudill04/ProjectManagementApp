@@ -1,23 +1,27 @@
 package demo;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.text.Text;
-import model.*;
 
-public class ProjectsListViewController implements Initializable{
+public class ProjectViewController {
+
+    @FXML
+    private Button ButtonAddTaskBacklog;
 
     @FXML
     private Button ButtonContactUs;
 
     @FXML
+    private Button ButtonDone;
+
+    @FXML
     private Button ButtonHome;
+
+    @FXML
+    private Button ButtonInProgress;
 
     @FXML
     private Button ButtonLeaderboard;
@@ -32,13 +36,52 @@ public class ProjectsListViewController implements Initializable{
     private Button ButtonProjects;
 
     @FXML
-    private Button MakeNewProject;
+    private Button ButtonToDo;
 
     @FXML
-    private Text lbl_title;
+    void AddTaskBacklog(ActionEvent event) {
+
+    }
 
     @FXML
-    private Button openElectricMissiles;
+    void AddTaskInProgress(ActionEvent event) {
+
+    }
+
+    @FXML
+    void AddTaskToDo(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addTaskToDone(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getUserProfile(ActionEvent event) {
+
+    }
+
+    @FXML
+    void goHome(ActionEvent event) {
+
+    }
+
+    @FXML
+    void openLeaderboard(ActionEvent event) {
+
+    }
+
+    @FXML
+    void openMyWork(ActionEvent event) {
+
+    }
+
+    @FXML
+    void openProjectListView(ActionEvent event) {
+
+    }
 
     @FXML
     void gotoContactUs(ActionEvent event) throws IOException {
@@ -68,22 +111,6 @@ public class ProjectsListViewController implements Initializable{
     @FXML
     void gotoProjectListView(ActionEvent event) throws IOException {
         App.setRoot("ProjectListView");
-    }
-
-
-    @FXML
-    void openNewProjectDialog(ActionEvent event) { //needs a pop-up text box implemented for all project fields
-
-    }
-
-
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
-        //get the current user from the facade
-        User user = facade.getUser();
-        String firstName = user.getFirstName();
-        lbl_title.setText("Welcome " + firstName);
     }
 
 }
