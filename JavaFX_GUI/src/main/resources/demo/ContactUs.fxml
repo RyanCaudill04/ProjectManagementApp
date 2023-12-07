@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="signup_pane" prefHeight="483.0" prefWidth="997.0" style="-fx-background-color: #b4e8fa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ContactUsController">
+<AnchorPane id="AnchorPane" fx:id="signup_pane" prefHeight="483.0" prefWidth="997.0" style="-fx-background-color: #b4e8fa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.ContactUsController">
    <children>
       <Pane layoutX="273.0" layoutY="87.0" prefHeight="355.0" prefWidth="451.0" style="-fx-border-color: #4195d4; -fx-border-radius: 10px;">
          <children>
@@ -26,7 +26,7 @@
             <TextField fx:id="txt_first_name" layoutX="274.0" layoutY="122.0" />
             <TextField fx:id="txt_last_name" layoutX="45.0" layoutY="122.0" />
             <TextField fx:id="txt_message" layoutX="45.0" layoutY="207.0" prefHeight="87.0" prefWidth="378.0" text=" " />
-            <Button layoutX="45.0" layoutY="302.0" mnemonicParsing="false" onMouseClicked="#btnSignupClicked" prefHeight="25.0" prefWidth="378.0" style="-fx-background-color: #4195D4;" text="Send Message" textFill="WHITE" />
+            <Button layoutX="45.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="378.0" style="-fx-background-color: #4195D4;" text="Send Message" textFill="WHITE" />
             <TextField fx:id="txt_first_name1" layoutX="45.0" layoutY="165.0" prefHeight="25.0" prefWidth="378.0" />
          </children>
       </Pane>
