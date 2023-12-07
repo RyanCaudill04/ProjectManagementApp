@@ -42,8 +42,8 @@ public class LoginController {
     }
 
     @FXML
-    void userSignup(ActionEvent event) {
-        
+    void userSignup(ActionEvent event) throws IOException {
+        App.setRoot("Signup");
     }
 
 }

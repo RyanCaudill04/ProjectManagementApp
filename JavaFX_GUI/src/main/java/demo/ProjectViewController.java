@@ -71,31 +71,6 @@ public class ProjectViewController implements Initializable{
     }
 
     @FXML
-    void getUserProfile(ActionEvent event) {
-
-    }
-
-    @FXML
-    void goHome(ActionEvent event) {
-
-    }
-
-    @FXML
-    void openLeaderboard(ActionEvent event) {
-
-    }
-
-    @FXML
-    void openMyWork(ActionEvent event) {
-
-    }
-
-    @FXML
-    void openProjectListView(ActionEvent event) {
-
-    }
-
-    @FXML
     void gotoContactUs(ActionEvent event) throws IOException {
         App.setRoot("ContactUs");
     }
