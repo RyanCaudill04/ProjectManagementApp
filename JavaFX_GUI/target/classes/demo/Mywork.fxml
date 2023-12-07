@@ -16,11 +16,11 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="362.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="112.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
       <Button layoutX="200.0" layoutY="16.0" mnemonicParsing="false" text="My Work" />
-      <Button layoutX="452.0" layoutY="16.0" mnemonicParsing="false" text="Projects" />
-      <Button layoutX="687.0" layoutY="16.0" mnemonicParsing="false" text="Learderboard" />
-      <Button layoutX="903.0" layoutY="28.0" mnemonicParsing="false" text="Home" />
-      <Button layoutX="1023.0" layoutY="29.0" mnemonicParsing="false" text="Contact Us" />
-      <Button layoutX="1164.0" layoutY="29.0" mnemonicParsing="false" text="Profile" />
+      <Button fx:id="projectsButton" layoutX="452.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotToProjects" text="Projects" />
+      <Button fx:id="leaderboardButton" layoutX="687.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToLeaderboard" text="Leaderboard" />
+      <Button fx:id="homeButton" layoutX="915.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToHome" text="Home" />
+      <Button fx:id="contactButton" layoutX="1023.0" layoutY="29.0" mnemonicParsing="false" onAction="#gotToContact" text="Contact Us" />
+      <Button fx:id="profileButton" layoutX="1152.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToProfile" text="Profile" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="264.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="241.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="544.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="241.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="493.0" layoutX="819.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="241.0" />
@@ -39,9 +39,9 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <ImageView fitHeight="32.0" fitWidth="56.0" layoutX="911.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="1164.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/Home.png" />
+            <Image url="@images/Profile.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="25.0" fitWidth="45.0" layoutX="1042.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
@@ -49,12 +49,12 @@
             <Image url="@images/Mail.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="45.0" layoutX="1176.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="923.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/Profile.png" />
+            <Image url="@images/Home.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="110.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="135.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/Logo.png" />
          </image>
