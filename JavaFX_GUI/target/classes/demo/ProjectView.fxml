@@ -39,6 +39,6 @@
       <Button fx:id="ButtonInProgress" layoutX="744.0" layoutY="684.0" mnemonicParsing="false" onAction="#AddTaskInProgress" text="Add Task" />
       <Button fx:id="ButtonToDo" layoutX="447.0" layoutY="684.0" mnemonicParsing="false" onAction="#AddTaskToDo" text="Add Task" />
       <Pane layoutX="364.0" layoutY="290.0" prefHeight="381.0" prefWidth="241.0" />
-      <HBox fx:id="HBox" layoutX="12.0" layoutY="196.0" prefHeight="470.0" prefWidth="1235.0" />
+      <HBox fx:id="hbox_cols" layoutX="12.0" layoutY="196.0" prefHeight="470.0" prefWidth="1235.0" />
    </children>
 </Pane>
