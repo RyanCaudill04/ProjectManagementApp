@@ -325,5 +325,7 @@ public class ProjectSystemFACADE {
     public User getUser() {
         return user;
     }
-
+    public Project getProjectByName(String name) {
+        return PL.getProject(name);
+    }
 }
