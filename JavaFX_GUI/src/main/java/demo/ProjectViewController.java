@@ -133,7 +133,7 @@ public class ProjectViewController implements Initializable{
 
         for(Column column : columns){
             System.out.println("Column " + column);
-            Vbox columnBox = new VBox();
+            VBox columnBox = new VBox();
             columnBox.getStyleClass().add("column");
             hbox_cols.getChildren.add(columnBox);
             hbox_cols.setSpacing(10);
