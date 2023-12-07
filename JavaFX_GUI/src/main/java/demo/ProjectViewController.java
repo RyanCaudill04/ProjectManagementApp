@@ -8,10 +8,13 @@ import model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.TextAlignment;
 
 import java.util.ArrayList;
 
@@ -137,8 +140,11 @@ public class ProjectViewController implements Initializable{
             System.out.println("Column " + column);
             VBox columnBox = new VBox();
             columnBox.getStyleClass().add("column");
+            columnBox.setPadding(new Insets(10,10,10,10));
+            columnBox.setAlignment(Pos.TOP_CENTER);
             hbox_cols.getChildren().add(columnBox);
-            hbox_cols.setSpacing(10);
+            hbox_cols.setSpacing(20);
+            
             Label title = new Label();
             title.getStyleClass().add("column_title");
             title.setText(column.getName());
