@@ -21,7 +21,7 @@
          </children></AnchorPane>
       <AnchorPane layoutX="31.0" layoutY="359.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15;">
          <children>
-            <Text fx:id="PropertiesBody" layoutX="86.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="PropertiesBody" layoutX="26.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Properties_Placeholder" />
          </children></AnchorPane>
       <AnchorPane layoutX="417.0" layoutY="93.0" prefHeight="142.0" prefWidth="467.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15;">
          <children>
@@ -37,9 +37,9 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="376.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="179.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="555.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="179.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="734.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white;" width="179.0" />
-      <Button fx:id="MyWork" layoutX="261.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoTaskView" text="My Work" />
+      <Button fx:id="MyWork" layoutX="261.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoMyWork" text="My Work" />
       <Button fx:id="Projects" layoutX="440.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoProjectListView" text="Projects" />
       <Button fx:id="Leaderboard" layoutX="603.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoLeaderboard" text="Leaderboard" />
-      <Button fx:id="Home" layoutX="798.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoProjectView" text="Home" />
+      <Button fx:id="Home" layoutX="798.0" layoutY="17.0" mnemonicParsing="false" onAction="#gotoHome" text="Home" />
    </children>
 </AnchorPane>
