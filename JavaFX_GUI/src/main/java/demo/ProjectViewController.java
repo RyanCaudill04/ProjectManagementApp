@@ -1,12 +1,22 @@
 package demo;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import model.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import model.Project;
+import model.ProjectSystemFACADE;
+import model.User;
+import java.util.ArrayList;
 
-public class ProjectViewController {
+public class ProjectViewController implements Initializable{
 
     @FXML
     private Button ButtonAddTaskBacklog;
@@ -113,4 +123,36 @@ public class ProjectViewController {
         App.setRoot("ProjectListView");
     }
 
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
+        //get the current user from the facade
+        User user = facade.getUser();
+        Project project = facade.getProjectByName();//implement
+        ArrayList<Column> columns = project.getColumns();
+
+        for(Column column : columns){
+            System.out.println("Column " + column);
+            Vbox columnBox = new VBox();
+            columnBox.getStyleClass().add("column");
+            hbox_cols.getChildren.add(columnBox);
+            hbox_cols.setSpacing(10);
+            Label title = new Label();
+            title.getStyleClass().add("column_title");
+            title.setText(column.getColumnName());
+            columnBox.getChildren().add(title);
+
+        }
+
+
+        ArrayList<Task> tasks = column.getTasks();
+        
+        for(Task task : tasks){
+        	Label taskLabel = new Label();
+        	taskLabel.setWrapText(true);
+        	taskLabel.setText(task.getName());
+        	columnBox.getChildren().add(taskLabel);
+        }
+
+    }
 }

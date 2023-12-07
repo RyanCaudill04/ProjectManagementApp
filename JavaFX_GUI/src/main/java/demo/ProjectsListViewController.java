@@ -82,6 +82,7 @@ public class ProjectsListViewController implements Initializable{
         ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
         //get the current user from the facade
         User user = facade.getUser();
+        
         String firstName = user.getFirstName();
         lbl_title.setText("Welcome " + firstName);
     }
