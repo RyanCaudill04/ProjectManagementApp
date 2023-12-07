@@ -10,10 +10,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import model.Project;
-import model.ProjectSystemFACADE;
-import model.User;
+
 import java.util.ArrayList;
 
 public class ProjectViewController implements Initializable{
@@ -47,6 +46,9 @@ public class ProjectViewController implements Initializable{
 
     @FXML
     private Button ButtonToDo;
+
+    @FXML
+    private HBox hbox_cols;
 
     @FXML
     void AddTaskBacklog(ActionEvent event) {
@@ -128,31 +130,29 @@ public class ProjectViewController implements Initializable{
         ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
         //get the current user from the facade
         User user = facade.getUser();
-        Project project = facade.getProjectByName();//implement
+        Project project = facade.getProjectByName("Electric Missiles");//implement
         ArrayList<Column> columns = project.getColumns();
 
         for(Column column : columns){
             System.out.println("Column " + column);
             VBox columnBox = new VBox();
             columnBox.getStyleClass().add("column");
-            hbox_cols.getChildren.add(columnBox);
+            hbox_cols.getChildren().add(columnBox);
             hbox_cols.setSpacing(10);
             Label title = new Label();
             title.getStyleClass().add("column_title");
-            title.setText(column.getColumnName());
+            title.setText(column.getName());
             columnBox.getChildren().add(title);
-
-        }
-
 
         ArrayList<Task> tasks = column.getTasks();
         
         for(Task task : tasks){
         	Label taskLabel = new Label();
         	taskLabel.setWrapText(true);
-        	taskLabel.setText(task.getName());
+        	taskLabel.setText(task.getTitle());
         	columnBox.getChildren().add(taskLabel);
         }
+    }
 
     }
 }
