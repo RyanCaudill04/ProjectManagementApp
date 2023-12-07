@@ -16,36 +16,30 @@
             <Font size="48.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="89.0" layoutX="107.0" layoutY="246.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="226.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="89.0" layoutX="176.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="88.0" />
-      <Text fill="WHITE" layoutX="125.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Electric Missiles">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="195.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+">
-         <font>
-            <Font size="60.0" />
-         </font>
-      </Text>
       <Text fill="#4195d4" layoutX="494.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board" />
       <Text fill="#0043c9" layoutX="689.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" underline="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="862.0" stroke="BLACK" strokeType="INSIDE" width="396.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="112.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="362.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="612.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
-      <Button fx:id="ButtonMyWork" layoutX="200.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoMyWork" text="My Work" />
-      <Button fx:id="ButtonProjects" layoutX="452.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoProjectListView" text="Projects" />
-      <Button fx:id="ButtonLeaderboard" layoutX="687.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoLeaderboard" text="Leaderboard" />
-      <Button fx:id="ButtonContactUs" layoutX="1010.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoContactUs" text="Contact us" />
-      <Button fx:id="ButtonHome" layoutX="903.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoHome" text="Home" />
-      <Button fx:id="ButtonProfile" layoutX="1152.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoProfile" text="Profile" />
+      <Button fx:id="ButtonMyWork" layoutX="202.0" layoutY="14.0" mnemonicParsing="false" onAction="#gotoMyWork" style="-fx-background-color: #1e90ff;" text="My Work" />
+      <Button fx:id="ButtonProjects" layoutX="456.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoProjectListView" style="-fx-background-color: #1e90ff;" text="Projects" />
+      <Button fx:id="ButtonLeaderboard" layoutX="693.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoLeaderboard" style="-fx-background-color: #1e90ff;" text="Leaderboard" />
+      <Button fx:id="ButtonContactUs" layoutX="1013.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoContactUs" style="-fx-background-color: #1e90ff;" text="Contact us" />
+      <Button fx:id="ButtonHome" layoutX="914.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoHome" style="-fx-background-color: #1e90ff;" text="Home" />
+      <Button fx:id="ButtonProfile" layoutX="1152.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoProfile" style="-fx-background-color: #1e90ff;" text="Profile" />
       <ImageView fitHeight="113.0" fitWidth="113.0">
          <image>
             <Image url="@../../../../../../Logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="MakeNewProject" layoutX="189.0" layoutY="402.0" mnemonicParsing="false" onAction="#openNewProjectDialog" text="Button" />
-      <Button fx:id="openElectricMissiles" layoutX="189.0" layoutY="278.0" mnemonicParsing="false" onAction="#gotoHome" text="Button" />
+      <Button fx:id="MakeNewProject" layoutX="182.0" layoutY="377.0" mnemonicParsing="false" onAction="#openNewProjectDialog" prefHeight="86.0" prefWidth="86.0" style="-fx-background-color: #1e90ff;" text="+" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="openElectricMissiles" layoutX="107.0" layoutY="242.0" mnemonicParsing="false" onAction="#gotoHome" prefHeight="89.0" prefWidth="226.0" style="-fx-background-color: #1e90ff;" text="Electric Missiles" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
    </children>
 </Pane>
