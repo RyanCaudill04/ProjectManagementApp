@@ -6,12 +6,18 @@ import java.util.ResourceBundle;
 import model.*;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
@@ -117,6 +123,34 @@ public class ProjectViewController implements Initializable{
             columnBox.getStyleClass().add("column");
             columnBox.setPadding(new Insets(10,10,10,10));
             columnBox.setAlignment(Pos.TOP_CENTER);
+            columnBox.setOnDragOver(new EventHandler<DragEvent>() {
+                public void handle(DragEvent event){
+                    if(event.getGestureSource() != columnBox && event.getDragboard().hasString()){
+                        event.acceptTransferModes(TransferMode.MOVE);
+                    }
+
+                    event.consume();
+                }
+                
+            });
+            columnBox.setOnDragDropped(new EventHandler<DragEvent>() {
+                public void handle(DragEvent event){
+                    Dragboard db = event.getDragboard();
+                    boolean success = false;
+                    if(db.hasString()){
+                        Label aLabel = new Label();
+                        aLabel.setWrapText(true);
+                        aLabel.setText(db.getString());
+                        columnBox.getChildren().add(aLabel);
+                        success = true;
+                    }
+                    event.setDropCompleted(success);
+
+                    event.consume();
+                }
+                
+            });
+
             hbox_cols.getChildren().add(columnBox);
             hbox_cols.setSpacing(20);
             
@@ -132,6 +166,25 @@ public class ProjectViewController implements Initializable{
         	taskLabel.setWrapText(true);
         	taskLabel.setText(task.getTitle());
         	columnBox.getChildren().add(taskLabel);
+            taskLabel.setOnDragDetected(new EventHandler<MouseEvent>() {
+                public void handle(MouseEvent event){
+                    Dragboard db = taskLabel.startDragAndDrop(TransferMode.ANY);
+                    ClipboardContent content = new ClipboardContent();
+                    content.putString(taskLabel.getText());
+                    db.setContent(content);
+
+                    event.consume();
+                }
+            });
+            taskLabel.setOnDragDone(new EventHandler<DragEvent>() {
+                public void handle(DragEvent event){
+                    if(event.getTransferMode() == TransferMode.MOVE){
+                        columnBox.getChildren().remove(taskLabel);
+                    }
+                    
+                    event.consume();
+                }
+            });
         }
     }
 
