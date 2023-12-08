@@ -156,8 +156,10 @@ public class ProjectViewController implements Initializable{
                         columnBox.getChildren().add(aLabel);
                         aLabel.setOnDragDone(new EventHandler<DragEvent>() {
                             public void handle(DragEvent event){
-                                if(event.getTransferMode() == TransferMode.MOVE){
+                                if(event.getTransferMode() == TransferMode.MOVE){//Get data, Declare new Task, add task to column (where moved),
+                                                                                 // remove from previous Column, save to JSON
                                     columnBox.getChildren().remove(aLabel);
+                                    
                                 }
                                  event.consume();
                             }
@@ -192,6 +194,7 @@ public class ProjectViewController implements Initializable{
                 public void handle(DragEvent event){
                     if(event.getTransferMode() == TransferMode.MOVE){
                         columnBox.getChildren().remove(taskLabel);
+                        column.removeTask(task);//when get to new colum know column box, get ID of column from column box, OR get column by name/ID in facade
                         }
 
                         event.consume();
