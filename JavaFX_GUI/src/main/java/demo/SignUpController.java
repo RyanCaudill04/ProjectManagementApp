@@ -32,13 +32,33 @@ public class SignUpController {
         String lName = lastName.getText();
         String eMAIL = email.getText();
         String passWORD = password.getText();
+        boolean isEmpty = false;
 
+        if (fName == null || fName == "") {
+            System.out.println("Error: missing first name");
+            isEmpty = true;
+        }
+        if (lName == null || fName == "") {
+            System.out.println("Error: missing last name");
+            isEmpty = true;
+        }
+        if (fName == null || fName == "") {
+            System.out.println("Error: missing email");
+            isEmpty = true;
+        }
+        if (fName == null || fName == "") {
+            System.out.println("Error: missing password");
+            isEmpty = true;
+        }
+        if (isEmpty) {
+            return;
+        }
         ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
 
         User user = facade.signUp(eMAIL, fName, lName, true, passWORD);
 
         facade.setUser(user);
-        System.out.println(user.toString() + " has been signed up!");
+        System.out.println(user.getName() + " has been signed up!");
         App.setRoot("ProjectListView");
     }
 
