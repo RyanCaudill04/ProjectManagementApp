@@ -142,6 +142,7 @@ public class ProjectViewController implements Initializable{
             columnBox.getStyleClass().add("column");
             columnBox.setPadding(new Insets(10,10,10,10));
             columnBox.setAlignment(Pos.TOP_CENTER);
+            columnBox.setMinWidth(300);
             columnBox.setOnDragOver(new EventHandler<DragEvent>() {
                 public void handle(DragEvent event){
                     if(event.getGestureSource() != columnBox && event.getDragboard().hasString()){
