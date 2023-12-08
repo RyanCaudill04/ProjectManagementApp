@@ -6,8 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import model.ProjectSystemFACADE;
-import model.User;
+import model.*;
 
 public class SignUpController {
 
@@ -33,20 +32,19 @@ public class SignUpController {
         String eMAIL = email.getText();
         String passWORD = password.getText();
         boolean isEmpty = false;
-
-        if (fName == null || fName == "") {
+        if (fName.isEmpty()) {
             System.out.println("Error: missing first name");
             isEmpty = true;
         }
-        if (lName == null || fName == "") {
+        if (lName.isEmpty()) {
             System.out.println("Error: missing last name");
             isEmpty = true;
         }
-        if (fName == null || fName == "") {
+        if (fName.isEmpty()) {
             System.out.println("Error: missing email");
             isEmpty = true;
         }
-        if (fName == null || fName == "") {
+        if (fName.isEmpty()) {
             System.out.println("Error: missing password");
             isEmpty = true;
         }
