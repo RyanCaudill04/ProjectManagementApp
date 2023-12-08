@@ -43,7 +43,7 @@
       <HBox fx:id="hbox_cols" layoutX="12.0" layoutY="196.0" prefHeight="470.0" prefWidth="1235.0" />
    </children>
    <stylesheets>
-      <URL value="@styles.css" />
+      <URL value="@styles.css">
    </stylesheets>
 </Pane>
 
