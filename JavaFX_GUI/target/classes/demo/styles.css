@@ -1,5 +1,21 @@
+.root {}
+
+.button{
+    -fx-background-color: #FA8072;
+    -fx-text-fill: #BF1081;
+}
+
+.unique{
+    fx-text-fill: blue;
+}
+
 .column {
+
     -fx-background-color: #0043c9;
+    -fx-background-radius: 50px;
+
+    -fx-border-radius: 20px;
+    -fx-border-width: 20px;
     
 }
 .column_title {
