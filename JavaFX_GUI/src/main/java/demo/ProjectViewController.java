@@ -108,7 +108,19 @@ public class ProjectViewController implements Initializable{
     void gotoProjectListView(ActionEvent event) throws IOException {
         App.setRoot("ProjectListView");
     }
+    private void enableDragandDrop(Label aLabel){
+        aLabel.setOnDragDetected(new EventHandler<MouseEvent>() {
+                    public void handle(MouseEvent event){
+                        Dragboard db = aLabel.startDragAndDrop(TransferMode.ANY);
+                        ClipboardContent content = new ClipboardContent();
+                        content.putString(aLabel.getText());
+                        db.setContent(content);
 
+                        event.consume();
+                    }
+                });
+    } 
+   
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
@@ -142,6 +154,15 @@ public class ProjectViewController implements Initializable{
                         aLabel.setWrapText(true);
                         aLabel.setText(db.getString());
                         columnBox.getChildren().add(aLabel);
+                        aLabel.setOnDragDone(new EventHandler<DragEvent>() {
+                            public void handle(DragEvent event){
+                                if(event.getTransferMode() == TransferMode.MOVE){
+                                    columnBox.getChildren().remove(aLabel);
+                                }
+                                 event.consume();
+                            }
+                         });   
+                        enableDragandDrop(aLabel);
                         success = true;
                     }
                     event.setDropCompleted(success);
@@ -166,27 +187,20 @@ public class ProjectViewController implements Initializable{
         	taskLabel.setWrapText(true);
         	taskLabel.setText(task.getTitle());
         	columnBox.getChildren().add(taskLabel);
-            taskLabel.setOnDragDetected(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event){
-                    Dragboard db = taskLabel.startDragAndDrop(TransferMode.ANY);
-                    ClipboardContent content = new ClipboardContent();
-                    content.putString(taskLabel.getText());
-                    db.setContent(content);
-
-                    event.consume();
-                }
-            });
+            enableDragandDrop(taskLabel);
             taskLabel.setOnDragDone(new EventHandler<DragEvent>() {
                 public void handle(DragEvent event){
                     if(event.getTransferMode() == TransferMode.MOVE){
                         columnBox.getChildren().remove(taskLabel);
+                        }
+
+                        event.consume();
                     }
-                    
-                    event.consume();
-                }
-            });
+                });   
         }
     }
 
     }
 }
+
+        
