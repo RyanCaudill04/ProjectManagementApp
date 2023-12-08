@@ -1,8 +1,8 @@
 .root {}
 
 .button{
-    -fx-background-color: #0043c9;
-    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #1e90ff;
+    -fx-text-fill: #fff;
 }
 
 .unique{
