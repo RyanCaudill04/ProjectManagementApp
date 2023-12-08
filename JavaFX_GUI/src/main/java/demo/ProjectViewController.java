@@ -160,6 +160,7 @@ public class ProjectViewController implements Initializable{
                         Label aLabel = new Label();
                         aLabel.setWrapText(true);
                         aLabel.setText(db.getString());
+                        aLabel.getStyleClass().add("task");
                         columnBox.getChildren().add(aLabel);
                         columnBoxes.get(columnBox).addTask(draggedTask);
                         DataWriter.saveProjects();
@@ -199,6 +200,7 @@ public class ProjectViewController implements Initializable{
             taskLabels.put(taskLabel, task);
             System.out.println(taskLabels.get(taskLabel).getTitle());
         	taskLabel.setWrapText(true);
+            taskLabel.getStyleClass().add("task");
         	taskLabel.setText(task.getTitle());
         	columnBox.getChildren().add(taskLabel);
             enableDragandDrop(taskLabel);
