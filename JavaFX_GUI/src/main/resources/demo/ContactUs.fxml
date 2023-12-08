@@ -62,7 +62,7 @@
       <Button layoutX="192.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: #1e90ff;" text="My Work " textFill="WHITE" />
       <Button layoutX="388.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #1e90ff;" text="Projects" textFill="WHITE" />
       <Button layoutX="584.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #1e90ff;" text="Leaderboard" textFill="WHITE" />
-      <Button layoutX="732.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: #1e90ff;" text="Home" textFill="#f4f2f2" />
+      <Button fx:id="Home" layoutX="732.0" layoutY="34.0" mnemonicParsing="false" onAction="#gotoHome" style="-fx-background-color: #1e90ff;" text="Home" textFill="#f4f2f2" />
       <Button layoutX="820.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: #1e90ff;" text="Contact Us" textFill="#f7f4f4" />
       <Button layoutX="921.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: #1e90ff;" text="Profile" textFill="WHITE" />
       
