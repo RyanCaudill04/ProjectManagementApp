@@ -20,10 +20,10 @@
       <Text fill="#4195d4" layoutX="364.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" wrappingWidth="62.31964111328125" />
       <Text fill="#4195d4" layoutX="155.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="85.6529541015625" />
       <Text fill="#4195d4" layoutX="155.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password: " wrappingWidth="85.6529541015625" />
-      <Button alignment="CENTER" layoutX="155.0" layoutY="300.0" mnemonicParsing="false" onAction="#signUpUser" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #1e90ff;" text="Sign Up" />
-      <TextField layoutX="155.0" layoutY="163.0" prefHeight="25.0" prefWidth="123.0" />
-      <TextField layoutX="334.0" layoutY="163.0" prefHeight="25.0" prefWidth="123.0" />
-      <TextField layoutX="155.0" layoutY="217.0" prefHeight="25.0" prefWidth="302.0" />
-      <TextField layoutX="155.0" layoutY="266.0" prefHeight="25.0" prefWidth="302.0" />
+      <Button fx:id="signUpButton" alignment="CENTER" layoutX="155.0" layoutY="300.0" mnemonicParsing="false" onAction="#signUpUser" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #1e90ff;" text="Sign Up" />
+      <TextField fx:id="firstName" layoutX="155.0" layoutY="163.0" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="lastName" layoutX="334.0" layoutY="163.0" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="email" layoutX="155.0" layoutY="217.0" prefHeight="25.0" prefWidth="302.0" />
+      <TextField fx:id="password" layoutX="155.0" layoutY="266.0" prefHeight="25.0" prefWidth="302.0" />
    </children>
 </Pane>
