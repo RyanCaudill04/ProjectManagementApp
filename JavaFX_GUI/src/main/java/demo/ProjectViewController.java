@@ -13,6 +13,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
@@ -62,7 +63,8 @@ public class ProjectViewController implements Initializable{
 
     @FXML
     void AddTaskBacklog(ActionEvent event) {
-
+        TextField newText = new TextField();
+        columnBoxList.get(0).getChildren().add(newText);
     }
 
     @FXML
@@ -124,6 +126,7 @@ public class ProjectViewController implements Initializable{
     public Task draggedTask;
     public Map<VBox, Column> columnBoxes = new HashMap<>();
     public Map<Label, Task> taskLabels = new HashMap<>();
+    ArrayList<VBox> columnBoxList = new ArrayList();
    
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -134,6 +137,7 @@ public class ProjectViewController implements Initializable{
         ArrayList<Column> columns = project.getColumns();
         columnBoxes = new HashMap<>();
         taskLabels = new HashMap<>();
+        columnBoxList = new ArrayList<>();
 
         for(Column column : columns){
             System.out.println("Column " + column);
@@ -143,6 +147,7 @@ public class ProjectViewController implements Initializable{
             columnBox.setPadding(new Insets(10,10,10,10));
             columnBox.setAlignment(Pos.TOP_CENTER);
             columnBox.setMinWidth(300);
+            columnBoxList.add(columnBox);
             columnBox.setOnDragOver(new EventHandler<DragEvent>() {
                 public void handle(DragEvent event){
                     if(event.getGestureSource() != columnBox && event.getDragboard().hasString()){
