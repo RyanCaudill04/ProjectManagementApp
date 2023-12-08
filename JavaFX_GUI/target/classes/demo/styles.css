@@ -1,8 +1,8 @@
 .root {}
 
 .button{
-    -fx-background-color: #FA8072;
-    -fx-text-fill: #BF1081;
+    -fx-background-color: #0043c9;
+    -fx-text-fill: #FFFFFF;
 }
 
 .unique{
@@ -11,8 +11,8 @@
 
 .column {
 
-    -fx-background-color: #0043c9;
-    -fx-background-radius: 50px;
+    -fx-background-color: #1e90ff;
+    -fx-background-radius: 20px;
 
     -fx-border-radius: 20px;
     -fx-border-width: 20px;
