@@ -27,7 +27,8 @@ import java.util.Map;
 import java.util.ArrayList;
 
 public class ProjectViewController implements Initializable{
-
+    private URL arg0;
+    private ResourceBundle arg1;
     @FXML
     private Button ButtonAddTaskBacklog;
 
@@ -81,7 +82,9 @@ public class ProjectViewController implements Initializable{
                 columnBoxes.get(columnBoxList.get(0)).addTask(newTask);
             }
         };
+        DataWriter.saveProjects();
         b.setOnAction(submitEvent);
+        initialize(arg0, arg1);
     }
 
     @FXML
@@ -147,6 +150,8 @@ public class ProjectViewController implements Initializable{
    
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        this.arg0 = arg0;
+        this.arg1 = arg1;
         ProjectSystemFACADE facade = ProjectSystemFACADE.getInstance();
         //get the current user from the facade
         User user = facade.getUser();
