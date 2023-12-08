@@ -62,9 +62,26 @@ public class ProjectViewController implements Initializable{
     private HBox hbox_cols;
 
     @FXML
-    void AddTaskBacklog(ActionEvent event) {
+    void AddTaskBacklog(ActionEvent event) throws IOException{
         TextField newText = new TextField();
         columnBoxList.get(0).getChildren().add(newText);
+        Button b = new Button("Submit");
+        columnBoxList.get(0).getChildren().add(b);
+        String text = "";
+        EventHandler<ActionEvent> submitEvent = new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent e){
+                Label taskLabel = new Label();
+                taskLabel.setWrapText(true);
+                taskLabel.getStyleClass().add("task");
+                columnBoxList.get(0).getChildren().remove(newText);
+                columnBoxList.get(0).getChildren().remove(b);
+                Task newTask = new Task(newText.getText());
+                taskLabels.put(taskLabel, newTask);
+                columnBoxList.get(0).getChildren().add(taskLabel);
+                columnBoxes.get(columnBoxList.get(0)).addTask(newTask);
+            }
+        };
+        b.setOnAction(submitEvent);
     }
 
     @FXML
