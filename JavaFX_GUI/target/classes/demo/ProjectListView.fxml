@@ -18,19 +18,19 @@
       </Text>
       <Text fill="#4195d4" layoutX="494.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board" />
       <Text fill="#0043c9" layoutX="689.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" underline="true" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="862.0" stroke="BLACK" strokeType="INSIDE" width="396.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="112.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="362.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="612.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
-      <Button fx:id="ButtonMyWork" layoutX="202.0" layoutY="14.0" mnemonicParsing="false" onAction="#gotoMyWork" style="-fx-background-color: #1e90ff;" text="My Work" />
-      <Button fx:id="ButtonProjects" layoutX="456.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoProjectListView" style="-fx-background-color: #1e90ff;" text="Projects" />
-      <Button fx:id="ButtonLeaderboard" layoutX="693.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoLeaderboard" style="-fx-background-color: #1e90ff;" text="Leaderboard" />
-      <Button fx:id="ButtonContactUs" layoutX="1013.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoContactUs" style="-fx-background-color: #1e90ff;" text="Contact us" />
-      <Button fx:id="ButtonHome" layoutX="914.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoHome" style="-fx-background-color: #1e90ff;" text="Home" />
-      <Button fx:id="ButtonProfile" layoutX="1152.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoProfile" style="-fx-background-color: #1e90ff;" text="Profile" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="862.0" stroke="DODGERBLUE" strokeType="INSIDE" width="396.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="112.0" stroke="DODGERBLUE" strokeType="INSIDE" width="250.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="362.0" stroke="DODGERBLUE" strokeType="INSIDE" width="250.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="612.0" stroke="DODGERBLUE" strokeType="INSIDE" width="250.0" />
+      <Button fx:id="ButtonMyWork" layoutX="202.0" layoutY="14.0" mnemonicParsing="false" onAction="#gotoMyWork" style="-fx-background-color: #1e90ff;" text="My Work" textFill="WHITE" />
+      <Button fx:id="ButtonProjects" layoutX="456.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoProjectListView" style="-fx-background-color: #1e90ff;" text="Projects" textFill="WHITE" />
+      <Button fx:id="ButtonLeaderboard" layoutX="693.0" layoutY="15.0" mnemonicParsing="false" onAction="#gotoLeaderboard" style="-fx-background-color: #1e90ff;" text="Leaderboard" textFill="WHITE" />
+      <Button fx:id="ButtonContactUs" layoutX="1024.0" layoutY="29.0" mnemonicParsing="false" onAction="#gotoContactUs" style="-fx-background-color: #1e90ff;" text="Contact us" textFill="WHITE" />
+      <Button fx:id="ButtonHome" layoutX="912.0" layoutY="29.0" mnemonicParsing="false" onAction="#gotoHome" style="-fx-background-color: #1e90ff;" text="Home" textFill="WHITE" />
+      <Button fx:id="ButtonProfile" layoutX="1151.0" layoutY="29.0" mnemonicParsing="false" onAction="#gotoProfile" style="-fx-background-color: #1e90ff;" text="Profile" textFill="WHITE" />
       <ImageView fitHeight="113.0" fitWidth="113.0">
          <image>
-            <Image url="@../../../../../../Logo.png" />
+            <Image url="@images/Logo.png" />
          </image>
       </ImageView>
       <Button fx:id="MakeNewProject" layoutX="182.0" layoutY="377.0" mnemonicParsing="false" onAction="#openNewProjectDialog" prefHeight="86.0" prefWidth="86.0" style="-fx-background-color: #1e90ff;" text="+" textAlignment="CENTER" textFill="WHITE">
@@ -41,5 +41,20 @@
          <font>
             <Font size="24.0" />
          </font></Button>
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="921.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="1045.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="1160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Profile.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

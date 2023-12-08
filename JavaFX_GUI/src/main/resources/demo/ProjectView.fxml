@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,7 +9,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import java.net.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.ProjectViewController">
    <children>
@@ -20,30 +20,45 @@
       </Text>
       <Text fill="#0043c9" layoutX="494.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board" underline="true" />
       <Text fill="#4195d4" layoutX="689.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="862.0" stroke="BLACK" strokeType="INSIDE" width="396.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="112.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="362.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="612.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="862.0" stroke="DODGERBLUE" strokeType="INSIDE" width="396.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="112.0" stroke="DODGERBLUE" strokeType="INSIDE" width="250.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="362.0" stroke="DODGERBLUE" strokeType="INSIDE" width="250.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="612.0" stroke="DODGERBLUE" strokeType="INSIDE" width="250.0" />
       <Button fx:id="ButtonMyWork" layoutX="200.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoMyWork" text="My Work" />
       <Button fx:id="ButtonProjects" layoutX="452.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoProjectListView" text="Projects" />
       <Button fx:id="ButtonLeaderboard" layoutX="687.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotoLeaderboard" text="Leaderboard" />
       <Button fx:id="ButtonContactUs" layoutX="1010.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoContactUs" text="Contact us" />
       <Button fx:id="ButtonHome" layoutX="903.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoHome" text="Home" />
       <Button fx:id="ButtonProfile" layoutX="1152.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoProfile" text="Profile" />
-      <ImageView fitHeight="113.0" fitWidth="113.0">
-         <image>
-            <Image url="@../../../../../../Logo.png" />
-         </image>
-      </ImageView>
+    
       <Button fx:id="ButtonAddTaskBacklog" layoutX="156.0" layoutY="684.0" mnemonicParsing="false" onAction="#AddTaskBacklog" text="Add Task" />
       <Button fx:id="ButtonDone" layoutX="1041.0" layoutY="684.0" mnemonicParsing="false" onAction="#addTaskToDone" text="Add Task" />
       <Button fx:id="ButtonInProgress" layoutX="744.0" layoutY="684.0" mnemonicParsing="false" onAction="#AddTaskInProgress" text="Add Task" />
       <Button fx:id="ButtonToDo" layoutX="447.0" layoutY="684.0" mnemonicParsing="false" onAction="#AddTaskToDo" text="Add Task" />
       <Pane layoutX="364.0" layoutY="290.0" prefHeight="381.0" prefWidth="241.0" />
       <HBox fx:id="hbox_cols" layoutX="12.0" layoutY="196.0" prefHeight="470.0" prefWidth="1235.0" />
+      <ImageView fitHeight="104.0" fitWidth="99.0" layoutX="7.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="912.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="1031.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="1161.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Profile.png" />
+         </image>
+      </ImageView>
    </children>
    <stylesheets>
       <URL value="@styles.css" />
    </stylesheets>
 </Pane>
-
